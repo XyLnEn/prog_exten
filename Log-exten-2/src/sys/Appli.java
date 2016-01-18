@@ -13,7 +13,11 @@ public class Appli {
 	
 	public static FactoryAffichage getFactAff() {
 		if(factAff == null) {
-			factAff = new FactoryAffichageConcrete();
+			synchronized(FactoryAffichage.class) {
+				if(factAff == null) {
+					factAff = new FactoryAffichageConcrete();
+				}
+			}
 		}
 		return factAff;
 	}

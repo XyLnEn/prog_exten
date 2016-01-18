@@ -1,1 +1,1 @@
-sys.AfficheurDefault
+sys.AfficheurDefault:par default
