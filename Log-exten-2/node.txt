@@ -1,1 +1,3 @@
-sys.AfficheurDefault:par default
+#:liste des afficheurs
+1:aff.AfficheurDefault:par default:sans_singleton
+2:aff.AfficheurPresqueJoli:plus joli que par default:avec_singleton

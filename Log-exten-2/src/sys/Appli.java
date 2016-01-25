@@ -27,6 +27,9 @@ public class Appli {
 		affichage = getFactAff().loadIafficheur();
 		Personne p = new Personne();
 		p.setNom("todo");
-		affichage.affiche(p);
+		while(true) {
+			affichage.affiche(p);
+			affichage = getFactAff().loadIafficheur();
+		}
 	}
 }
