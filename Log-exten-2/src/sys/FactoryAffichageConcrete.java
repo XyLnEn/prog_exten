@@ -20,13 +20,17 @@ public class FactoryAffichageConcrete implements FactoryAffichage{
 //		Vector<Class> listeClass = new Vector<Class>();
 		Vector<String> listeClass = new Vector<String>();
 		Iafficheur affich = null;
+		//on va lire le fichier
 		try {
+			//lecture...
 			br = new BufferedReader(new FileReader("node.txt"));
 			while((templigne= br.readLine()) != null) {
+				//cas ou la ligne n'est pas un commentaire
 				if(!templigne.split(":")[0].equals("#")) {
-					listeClass.add(templigne.split(":")[1] + "!" + templigne.split(":")[3]);
-					System.out.println(templigne.split(":")[0] + " : " + templigne.split(":")[2]);
+					listeClass.add(templigne.split(":")[1] + "!" + templigne.split(":")[3]); //nom!singleton?
+					System.out.println(templigne.split(":")[0] + " : " + templigne.split(":")[2]);//no : descr
 				}
+				//cas commentaire
 				else {
 					System.out.println(templigne.split(":")[1]);
 				}
