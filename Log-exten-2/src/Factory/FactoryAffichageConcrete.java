@@ -1,4 +1,4 @@
-package sys;
+package Factory;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -8,6 +8,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.Vector;
+
+import sys.Iafficheur;
 
 public class FactoryAffichageConcrete implements FactoryAffichage{
 
@@ -56,6 +58,7 @@ public class FactoryAffichageConcrete implements FactoryAffichage{
 			affich = null;
 		}
 		return affich;
+		//TODO: si erreur, stocker nom de classe qui marche pas, instantier message d'erreur, empecher appel de classe erronée
 	}
 
 	public Map getMap() {

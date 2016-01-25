@@ -4,6 +4,9 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 
+import Factory.FactoryAffichage;
+import Factory.FactoryAffichageConcrete;
+
 import com.sun.org.apache.bcel.internal.generic.LoadInstruction;
 
 public class Appli {
