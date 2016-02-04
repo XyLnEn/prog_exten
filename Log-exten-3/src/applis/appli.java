@@ -1,8 +1,8 @@
 package applis;
 
-import platform.Iafficheur;
-import platform.Personne;
 import platform.Platform;
+import ressources.Iafficheur;
+import ressources.Personne;
 
 public class appli {
 
@@ -13,7 +13,8 @@ public class appli {
 		Iafficheur aff = (Iafficheur) Platform.getInstance().getExtension(Iafficheur.class);
 		Personne p = new Personne();
 		aff.affiche(p);
-
+		//aff.logOn();
+		aff.affiche(p);
 	}
 
 }
